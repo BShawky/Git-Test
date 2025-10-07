@@ -1,4 +1,4 @@
-name: Basic CI
+name: My_Actions
 
 on:
   push:
@@ -18,7 +18,17 @@ jobs:
         run : |
          echo "Hello Testing !!"
          echo "Long time no see"
+       
+      - name: List all Dir Files
+        run : ls -la
+# Clone your git repo here
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+        
+      - name: List all Dir Files
+        run : ls -la
 
+        
 # Runner 2
   build_deploy:
     runs-on: ubuntu-latest
