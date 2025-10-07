@@ -15,13 +15,19 @@ jobs:
 
     steps:
       - name: Print Message from testing
-        run : echo "Hello Testing !!"
+        run : |
+         echo "Hello Testing !!"
+         echo "Long time no see"
 
 # Runner 2
   build_deploy:
     runs-on: ubuntu-latest
+# Starting depoly after testing first
     needs: [build_testing]
     
     steps:
       - name: Print Message from deploy
         run : echo "Hello Deploy !!"
+        
+      - name: List all Dir Files
+        run : ls -la
