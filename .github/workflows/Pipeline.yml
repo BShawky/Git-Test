@@ -9,6 +9,7 @@ on:
       - main
 
 jobs:
+# Runner 1
   build_testing:
     runs-on: ubuntu-latest
 
@@ -16,9 +17,11 @@ jobs:
       - name: Print Message from testing
         run : echo "Hello Testing !!"
 
+# Runner 2
   build_deploy:
     runs-on: ubuntu-latest
-
+    needs: [build_testing]
+    
     steps:
       - name: Print Message from deploy
         run : echo "Hello Deploy !!"
