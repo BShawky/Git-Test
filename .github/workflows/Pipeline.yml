@@ -27,8 +27,7 @@ jobs:
         
       - name: List all Dir Files
         run : ls -la
-
-        
+ 
 # Runner 2
   build_deploy:
     runs-on: ubuntu-latest
