@@ -1,0 +1,24 @@
+name: Basic CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message from testing
+        run : echo "Hello Testing !!"
+
+  build_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message from deploy
+        run : echo "Hello Deploy !!"
