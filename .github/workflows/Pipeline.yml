@@ -21,7 +21,7 @@ jobs:
         run : |
          echo "Hello Testing !!"
          echo "Long time no see"
-         echo "Priniting APP Name Env ${{ env.APP_NAME }}"
+         echo "Priniting APP Name ${{ env.APP_NAME }}"
        
       - name: List all Dir Files
         run : ls -la
