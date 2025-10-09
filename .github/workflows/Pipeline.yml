@@ -1,4 +1,7 @@
-name: My_Actions
+name: My_Git_Actions
+env:
+  APPLICATION_NAME    :"My_APP"
+  DEPOLY_PACKAGE_NAME : "html-app-ver-${{ github.sh }}"
 
 on:
   push:
