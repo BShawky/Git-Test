@@ -1,7 +1,7 @@
 name: My_Git_Actions
 env:
   APPLICATION_NAME    :"My_APP"
-  DEPOLY_PACKAGE_NAME : "html-app-ver-${{ github.sh }}"
+  DEPOLY_PACKAGE_NAME :"html-app-ver-${{ github.sh }}"
 
 on:
   push:
@@ -21,6 +21,7 @@ jobs:
         run : |
          echo "Hello Testing !!"
          echo "Long time no see"
+         echo "Priniting Gloval Env ${{ env.DEPOLY_PACKAGE_NAME}}"
        
       - name: List all Dir Files
         run : ls -la
@@ -30,6 +31,7 @@ jobs:
         
       - name: List all Dir Files
         run : ls -la
+        
  
 # Runner 2
   build_deploy:
